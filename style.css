@@ -1,3 +1,87 @@
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-dark-grey: #4d4d4d;
+    --color-dark-blue: #1a1981e1;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #276fc2;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+
+    /* Font Size */
+    --font-large: 32px;
+    --font-medium: 24px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Navbar Section */
+#navbar {
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo a {
+    font-size: var(--font-regular);
+}
+
+.navbar__logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar__menu {
+    display: flex;
+    font-size: var(--font-small);
+    text-align: right;
+}
+
+.navbar__menu li {
+    margin-right: 6px;
+}
+
+/* Home Section */
+#home {
+    background-image: url(./imgs/pofol__bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home__avatar {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.home__title {
+    color: var(--color-white);
 }
