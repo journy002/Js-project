@@ -55,6 +55,7 @@ li {
     align-items: center;
     padding: 0.3rem 0.6rem;
     transition: all var(--animation-duration) ease-in;
+    z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -84,7 +85,7 @@ li {
     text-align: right;
 }
 
-.navbar__menu.font--dark {
+.navbar__menu.color--dark {
     color: #615d5d;
 }
 
@@ -100,11 +101,14 @@ li {
 
 /* Home Section */
 #home {
-    padding: calc(7rem + 4.5rem) 2rem 4rem;
     background-image: url(./imgs/pofol__bg.jpg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.home__container {
+    padding: calc(7rem + 4.5rem) 2rem 4rem;
     text-align: center;
 }
 
