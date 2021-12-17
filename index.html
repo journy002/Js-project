@@ -24,18 +24,17 @@
             <a href="#">MunSeok</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Testimonials</li>
-            <li class="navbar__menu__item">Contact</li>
+            <li class="navbar__menu__item" data-type="home">Home</li>
+            <li class="navbar__menu__item" data-type="about">About</li>
+            <li class="navbar__menu__item" data-type="skills">Skills</li>
+            <li class="navbar__menu__item" data-type="myWork">My work</li>
+            <li class="navbar__menu__item" data-type="contact">Contact</li>
         </ul>
     </nav>
     <section id="home">
         <img src="./imgs/portfolio__img.jpg" alt="Munseok's profile photo" class="home__avatar">
         <h2 class="home__title">
-            <p>프론트엔드 개발자 포트폴리오</p>
+            <p>- 프론트엔드 포트폴리오 -</p>
             <p>
                 안녕하세요.</br>
                 개발이 취미인 프론트엔드 개발자 오문석 입니다.</br>
@@ -44,8 +43,10 @@
         </h2>
     </section>
     <!-- About -->
-    <section id="about">
-        <p class="topic__title">About Me</p>
+    <section id="about" class="section__box">
+        <div class="topic__box">
+            <p class="topic__title">ABOUT ME</p>
+        </div>
         <div class="about__container">
             <div class="about__description">
                 <p>이름</p>
@@ -69,18 +70,23 @@
             </div>
             <div class="about__description">
                 <p>학력</p>
-                <span>북경어언대학교</br>(경제무역)</span>
+                <span>북경어언대학교 (경제무역)</span>
             </div>
         </div>
     </section>
     <!-- Skills -->
-    <section id="skills"></section>
+    <section id="skills" class="section__box">
+        <div class="topic__box skills">
+            <p class="topic__title">SKILLS</p>
+        </div>
+        <div class="skills__description">
+            222
+        </div>
+    </section>
     <!-- Work -->
-    <section id="work"></section>
-    <!-- Testimonials -->
-    <section id="testimonials"></section>
+    <section id="work" class="section__box">WORK</section>
     <!-- Contact -->
-    <section id="contact"></section>
+    <section id="contact" class="section__box">CONTACT</section>
 </body>
 
 </html>

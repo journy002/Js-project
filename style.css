@@ -18,9 +18,16 @@
     --font-regular: 18px;
     --font-small: 14px;
     --font-micro: 12px;
+
+    /* Annimation*/
+    --animation-duration: 300ms;
 }
 
 * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
     box-sizing: border-box;
 }
 
@@ -29,17 +36,29 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-a,
 li {
-    text-decoration: none;
     list-style: none;
+}
+
+.section__box {
+    padding: 4rem 2rem;
 }
 
 /* Navbar Section */
 #navbar {
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    transition: all var(--animation-duration) ease-in;
+}
+
+#navbar.navbar--dark {
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar__logo {
@@ -50,6 +69,7 @@ li {
 
 .navbar__logo a {
     font-size: var(--font-regular);
+    font-weight: 700;
 }
 
 .navbar__logo img {
@@ -59,24 +79,39 @@ li {
 
 .navbar__menu {
     display: flex;
-    font-size: var(--font-small);
+    font-size: var(--font-regular);
+    color: var(--color-white);
     text-align: right;
 }
 
+.navbar__menu.font--dark {
+    color: #615d5d;
+}
+
 .navbar__menu li {
-    margin-right: 6px;
+    margin-right: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar__menu li:hover {
+    color: var(--color-dark-white);
 }
 
 /* Home Section */
 #home {
+    padding: calc(7rem + 4.5rem) 2rem 4rem;
     background-image: url(./imgs/pofol__bg.jpg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 .home__avatar {
     display: inline-block;
+    margin-top: 3rem;
+    margin-bottom: 1.3rem;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -84,4 +119,68 @@ li {
 
 .home__title {
     color: var(--color-white);
+}
+
+.home__titel p {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    font-size: var(--font-medium);
+}
+
+.home__title:last-child {
+    font-size: var(--font-regular);
+    line-height: 2rem;
+}
+
+/* ABOUT Section*/
+.topic__box {
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.topic__box .topic__title {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    line-height: 3.5rem;
+}
+
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    text-align: center;
+    background-color: rgb(236, 236, 229);
+}
+
+.about__container .about__description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.6rem;
+    width: 33.3333%;
+    font-size: var(--font-regular);
+}
+
+.about__container .about__description p {
+    font-size: var(--font-regular);
+    font-weight: 600;
+}
+
+.about__container .about__description span {
+    font-size: 16px;
+}
+
+/* SKILLS Section */
+#skills {
+    background-color: rgb(83, 167, 118);
+}
+
+.topic__box.skills {
+    color: white;
+}
+
+.topic__box.skills .topic__title {
+    border-bottom: 1px solid whitesmoke;
 }
